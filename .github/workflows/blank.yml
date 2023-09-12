@@ -33,5 +33,5 @@ jobs:
         id: acr_version
         run: |
           acr=["2.302.1","2.303.0","2.304.0","2.306.0","2.308.0"]
-        #if:  contains(${{ acr }},"2.309.0")
-        if: contains(fromJson('["bar", "foo"]'), 'test')
+        if:  contains(fromJson(${{ acr }}),"2.309.0")
+        
