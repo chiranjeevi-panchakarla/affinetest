@@ -31,5 +31,6 @@ jobs:
 
       - name: acrversion
         id: acr_version
-        run: echo "${{ steps.runner_version.outputs.RUNNER_VERSION }}"
-        if: contains(["2.302.1","2.303.0","2.304.0","2.306.0","2.308.0"],"${{ steps.runner_version.outputs.RUNNER_VERSION }}")
+        run: |
+          acr=["2.302.1","2.303.0","2.304.0","2.306.0","2.308.0"]
+          echo $acr
