@@ -26,7 +26,7 @@ jobs:
              username: azureuser
              key: ${{ secrets.TEST }}
              port: 22
-             script: ls -l
+             script: ls -l /home
 
       # # Runs a single command using the runners shell
       # - name: Run a one-line script
