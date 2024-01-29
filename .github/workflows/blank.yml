@@ -4,8 +4,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: '25 9 * * *'
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +24,7 @@ jobs:
         with:
              host: 4.246.128.136
              username: azureuser
-             key: ${{ secrets.vm }}
+             key: ${{ secrets.TEST }}
              port: 22
              script: whoami
 
